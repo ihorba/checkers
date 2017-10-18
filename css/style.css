@@ -162,3 +162,8 @@ textarea {
 	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
+
+.ba-side-bottom .ba-row:first-child div:after,
+.ba-side-top .ba-row:nth-child(4) div:after {
+	display: none;
+}
