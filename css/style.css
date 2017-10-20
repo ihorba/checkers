@@ -67,10 +67,9 @@ textarea {
 }
 
 [class*="side"] {
-	position: absolute;
 	border: 2px solid #000;
 	height: 50%;
-	width: 100%;
+
 }
 
 .ba-side-top {
@@ -78,66 +77,19 @@ textarea {
 }
 
 .ba-side-bottom {
-	top: 50%;
 	border-top: none;
 }
 
 .ba-row {
-	position: absolute;
-	width: 100%;
 	height: 25%;
 }
 
-.ba-row:nth-child(2) {
-	top: 25%;
-}
-
-.ba-row:nth-child(3) {
-	top: 50%;
-}
-
-.ba-row:nth-child(4) {
-	top: 75%;
-}
-
 .ba-row div {
-	position: absolute;
+	float: left;
 	width: 12.5%;
 	height: 100%;
-	top:0;
 	border: 2px solid #000;
-}
-
-.ba-row div:first-child {
-	left: 0;
-}
-
-.ba-row div:nth-child(2) {
-	left: 12.5%
-}
-
-.ba-row div:nth-child(3) {
-	left: 25%
-}
-
-.ba-row div:nth-child(4) {
-	left: 37.5%
-}
-
-.ba-row div:nth-child(5) {
-	left: 50%
-}
-
-.ba-row div:nth-child(6) {
-	left: 62.5%
-}
-
-.ba-row div:nth-child(7) {
-	left: 75%
-}
-
-.ba-row div:nth-child(8) {
-	left: 87.5%
+	position: relative;
 }
 
 .ba-row:nth-child(odd) div:nth-child(odd),
@@ -166,4 +118,15 @@ textarea {
 .ba-side-bottom .ba-row:first-child div:after,
 .ba-side-top .ba-row:nth-child(4) div:after {
 	display: none;
+}
+
+.ba-side-bottom .ba-row:nth-child(odd) div:nth-child(odd):after,
+.ba-side-bottom .ba-row:nth-child(2n) div:nth-child(2n):after {
+	background: #fffadc;
+}
+
+.ba-row:nth-child(odd) div:nth-child(odd):hover:after,
+.ba-row:nth-child(2n) div:nth-child(2n):hover:after {
+	width: 95%;
+	height: 95%;
 }
